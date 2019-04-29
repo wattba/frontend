@@ -15,7 +15,6 @@ class LessonCard extends React.Component {
 
   render() {
     const tags = this.props.tags.split(",");
-    console.log(this.props.tags);
     let heart;
     if (this.state.liked)
       heart = (

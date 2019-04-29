@@ -1,0 +1,129 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.lesson-title {
+  width: 500px;
+}
+
+.lesson-title-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.lesson-description {
+  width: 500px;
+  height: 200px;
+}
+
+.subject-des-btn {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 5px;
+  outline: none;
+}
+
+.lesson-description-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.upload-section {
+  margin-left: 100px;
+}
+
+.addfile {
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  outline: none;
+}
+
+.subject-btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 5px;
+  outline: 0;
+}
+
+.main-body {
+  margin-top: 50px;
+}
+
+.main-subjects {
+  display: flex;
+  width: 1000px;
+}
+
+.submit-subject {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.submit-btn {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+.submit-your-topic {
+  border: lightgray 1px solid;
+  border-radius: 5px;
+  width: 500px;
+  margin-left: 5px;
+  height: 30px;
+  outline: none;
+}
+
+.qty {
+  border: lightgray 1px solid;
+  width: 40px;
+  height: 30px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.audience {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.supplies {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.supplies-sub-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.sublies-item {
+  width: 500px;
+  height: 30px;
+}
+
+.sublies-qty {
+  padding-left: 15px;
+}
+
+.duration {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.complete-add-class {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
