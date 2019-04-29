@@ -43,8 +43,12 @@ class LessonList extends Component {
           </div>
           <div className="col-md-2">
             <div class="btn-group">
-              <button type="button" class="btn btn-default side-btn left">
-                My profile{" "}
+              <button
+                type="button"
+                href="/profile"
+                class="btn btn-default side-btn left"
+              >
+                <a>My profile</a>
               </button>
               <button
                 type="button"
