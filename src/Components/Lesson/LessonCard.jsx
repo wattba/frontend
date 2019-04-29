@@ -21,14 +21,14 @@ class LessonCard extends React.Component {
       heart = <i className="fas fa-bookmark like" onClick={this.like.bind(this)}></i>
     return (
       <div
-        className="col-md-12"
+        className="col-md-12 lessons-card"
         style={{ marginBottom: "20px", marginTop: "10px" }}
       >
         <Card style={{ width: "auto", height: "230px", borderRadius: '15px' }}>
           <Card.Body>
             <div className="row">
               <div className="col-md-6">
-                <Card.Title>{this.props.name}</Card.Title>
+                <Card.Title className="card-title">{this.props.name}</Card.Title>
               </div>
               <div className="col-md-6">
                 <div className="tag">

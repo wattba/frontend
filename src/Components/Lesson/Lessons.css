@@ -1,13 +1,14 @@
 .top-search {
   border: 0px solid;
-  background-color: rgb(220, 220, 220, 0.2);
+  background-color: rgb(255, 255, 255, 0.8);
   outline: none;
   height: 49px;
-  padding-left: 10px;
+  padding-left: 15px;
   border-radius: 15px;
   font-size: 15px;
   width: 100%;
   color: black;
+  border: 1px solid #42383c;
   margin-top: 1.85em;
   margin-left: -6em;
 }
@@ -66,4 +67,48 @@ img {
   text-align: center;
   float: right;
   font-size: 10px;
+}
+
+.lessons-card {
+  transition: all 0.5s;
+  display: inline-block;
+  border-radius: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.lessons-card:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid black;
+  transform: translateY(-10px);
+  box-shadow: 0px 37px 20px -15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+}
+
+.trending {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.btn-group {
+  left: -3em;
+  margin: 2.2em;
+  position: absolute;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.left {
+  border: 2px solid black;
+  width: 100px;
+}
+
+.side-btn {
+  height: 49px;
+  border-radius: 15px;
 }

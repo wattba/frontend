@@ -1,11 +1,6 @@
-nav {
-  background-color: transparent;
+.dash-nav {
   border-radius: 0;
-}
-
-.navbar {
-  border: 0;
-  background-color: transparent;
+  border: 1.5px solid #464176;
 }
 
 .navbar-brand {

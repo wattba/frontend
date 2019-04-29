@@ -13,7 +13,9 @@ class AuthNavbar extends Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a href="#"><b style={{ color: 'black', fontSize: '65px', marginLeft: '-17em' }}>Open <br/> <span style={{ marginLeft: '-12em' }}> Curriculum </span></b></a>
+            <div className="title-box">
+              <h4 className="title">open curriculum</h4>
+            </div>
           </div>
         </div>
       </nav>

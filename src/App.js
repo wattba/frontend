@@ -17,7 +17,7 @@ import BuildYourClass from "./Components/BuildClass/BuildYourClass";
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="main-content">
         <Router>
           <Switch>
             <Route path="/Profile" component={Profile} />

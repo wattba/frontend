@@ -22,7 +22,7 @@ class LoginForm extends Component {
               </tr>
             </table>
           </div>
-          <button type="submit" className="btn btn-default login-btn">Login</button>
+          <button type="submit" className="btn btn-default login-btn"><a href="/dashboard" style={{ textDecoration: 'none', color: 'white' }}>Login</a></button>
           <p className="no-acc">Dont have an account? <a href="/signup" className="signup-link">SIGNUP</a></p>
         </form>
         <div className="tail"></div>
