@@ -8,7 +8,7 @@ import {
   Redirect
 } from "react-router-dom";
 import Dashboard from "./Components/Dashboard/Dashboard";
-import LessonList from "./Components/Lesson/LessonList";
+import Lesson from "./Components/Lesson/Lesson.jsx";
 
 class App extends Component {
   render() {
@@ -17,7 +17,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route path="/Dashboard" component={Dashboard} />
-            <Route path="/lessonList" component={LessonList} />
+            <Route path="/lesson/:name" component={Lesson} />
           </Switch>
         </Router>
       </div>

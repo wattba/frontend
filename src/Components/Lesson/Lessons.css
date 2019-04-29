@@ -12,6 +12,31 @@
   margin-left: -6em;
 }
 
+img {
+  overflow: hidden;
+  position: absolute;
+  object-fit: cover;
+}
+
+.subtitles {
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bookmarked {
+  padding-top: "10px";
+  padding-right: "10px";
+  padding-left: "10px";
+  font-size: "20px";
+}
+
+.titleLessons {
+  font-size: 26px;
+  font-weight: 500;
+  padding-top: 20px;
+}
+
 .like {
   margin: 1em;
   font-size: 20px;
