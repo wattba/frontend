@@ -14,7 +14,11 @@
 }
 
 #login-screen, #signup-screen {
-  background-image: linear-gradient(to right, #ff9966, #ff5e62);
+  /* background-image: linear-gradient(to right, #ff9966, #ff5e62); */
+  background-image: url('./Components/Login/gg1.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
 }
 
 nav {
@@ -33,6 +37,7 @@ nav {
   margin: 0.5em;
   padding: 1.8em;
   font-weight: 100;
+  text-align: left;
 }
 
 .meet {
@@ -72,6 +77,8 @@ nav {
   margin-left: 15%;
   margin-top: 11%;
   z-index: 100;
+  border: 3px solid #3e3c56;
+  border-radius: 15px;
 }
 
 .signup-form {
@@ -131,7 +138,7 @@ nav {
   width: 78%;
   height: 45px;
   color: white;
-  background-image: linear-gradient(to right, #ff9966, #ff5e62);
+  background-image: linear-gradient(to right, #3e3c56, #6c63ff);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -142,7 +149,7 @@ nav {
 }
 
 .lbl {
-  color: #ff5e62;
+  color: #6c63ff;
   font-size: 25px;
   font-weight: 500;
   padding-bottom: 4px;
@@ -159,7 +166,7 @@ nav {
 .signup-link {
   font-weight: 500;
   text-decoration: none;
-  color: #ff5e62;
+  color: #6c63ff;
 }
 /*
 .dash-backg {
@@ -257,7 +264,7 @@ nav {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  background-color: #ff5e62;
+  background-color: #6c63ff;
   color: white;
 }
 
@@ -265,7 +272,7 @@ nav {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  border: 1px solid #ff5e62;
+  border: 1px solid #6c63ff;
   color: white;
 }
 

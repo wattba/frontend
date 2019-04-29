@@ -16,9 +16,9 @@ class LessonCard extends React.Component {
   render() {
     let heart;
     if(this.state.liked)
-      heart = <i className="fas fa-heart like" onClick={this.like.bind(this)} style={{ color: 'red' }}></i>
+      heart = <i className="fas fa-bookmark like" onClick={this.like.bind(this)} style={{ color: 'red' }}></i>
     else
-      heart = <i className="fas fa-heart like" onClick={this.like.bind(this)}></i>
+      heart = <i className="fas fa-bookmark like" onClick={this.like.bind(this)}></i>
     return (
       <div
         className="col-md-12"

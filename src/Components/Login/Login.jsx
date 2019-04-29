@@ -11,7 +11,7 @@ class Login extends Component {
           <AuthNavbar />
           <div className="row">
             <div className="col-md-6">
-              <h1 className="welcome" style={{ fontWeight: 300, fontSize: '75px' }}>Welcome to <br /><span style={{ color: 'white', fontSize: '75px' }}>Open curriculum !!</span></h1>
+            
             </div>
             <div className="col-md-6">
               <LoginForm />
