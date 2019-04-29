@@ -16,9 +16,9 @@ class LessonCard extends React.Component {
   render() {
     let heart;
     if(this.state.liked)
-      heart = <i class="fas fa-heart like" onClick={this.like.bind(this)} style={{ color: 'red' }}></i>
+      heart = <i className="fas fa-heart like" onClick={this.like.bind(this)} style={{ color: 'red' }}></i>
     else
-      heart = <i class="fas fa-heart like" onClick={this.like.bind(this)}></i>
+      heart = <i className="fas fa-heart like" onClick={this.like.bind(this)}></i>
     return (
       <div
         className="col-md-12"
@@ -43,7 +43,7 @@ class LessonCard extends React.Component {
               {heart}
             </div>
             <div className="col-md-6">
-              <a href={"/lesson/" + this.props.name}><i class="fas fa-arrow-circle-right arrow"></i></a>
+              <a href={"/lesson/" + this.props.name}><i className="fas fa-arrow-circle-right arrow"></i></a>
             </div>
           </div>
         </Card>
