@@ -24,7 +24,8 @@ class App extends Component {
             <Route path="/login" component={Login} />
             <Route path="/Dashboard" component={Dashboard} />
             <Route path="/lessonList" component={LessonList} />
-            <Route path="/BuildYourClass" component={BuildYourClass}/>
+            <Route path="/build-your-class" component={BuildYourClass}/>
+            <Route path="/lesson/:name" component={Lesson}/>
           </Switch>
         </Router>
       </div>

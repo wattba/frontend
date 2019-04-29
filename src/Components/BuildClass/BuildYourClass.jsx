@@ -1,4 +1,7 @@
 import React, {Component} from "react";
+import Navbar from './Navbar';
+import Sidebar from './Sidebar';
+import Main from './Main';
 import './buildyourclass.css';
 
 class BuildYourClass extends Component {
@@ -14,7 +17,16 @@ class BuildYourClass extends Component {
   render() {
     return (
       <div className="buildyourclass-container">
-        <div>
+        <div className="header">
+          <Navbar />
+        </div>
+        <div className="row">
+          <div className="col-md-3" style={{ borderRight: '1px solid black' }}>
+            <Sidebar />
+          </div>
+          <div className="col-md-9">
+            <Main />
+          </div>
         </div>
       </div>
     );
@@ -22,4 +34,3 @@ class BuildYourClass extends Component {
 }
  
 export default BuildYourClass;
-
