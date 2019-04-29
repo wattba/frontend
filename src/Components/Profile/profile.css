@@ -1,0 +1,85 @@
+.profile-nav-bar {
+  height: 80px;
+  overflow: hidden;
+  background: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+.logo {
+  font-size: 32px;
+  color: white;
+  text-decoration: none;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  font-family: 'Raleway';
+}
+
+.profile-sidebar {
+  width: 600px;
+  height: 200vh;
+  padding-left: 60px;
+  padding-top: 150px;
+  border-right: #333 1px solid;
+}
+
+.profile-header {
+  height: 100px;
+}
+
+.profile-main {
+  width: 80%;
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-body {
+  display: flex;
+  flex-direction: row;
+  padding-left: 50px;
+}
+
+.avatar-container {
+  background-image: url('https://avatars3.githubusercontent.com/u/31831596?s=460&v=4');
+  background-size: 200px 200px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.profile-details {
+  text-align: left;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-item {
+  display: flex;
+}
+
+.profile-item-info {
+  font-weight: 00;
+  width: 200px;
+  height: 30px;
+}
+
+.profile-item-detail {
+  font-weight: 100px;
+}
+
+.education {
+  width: 700px;
+}
+
+.teaching-philosophy {
+  width: 600px;
+}

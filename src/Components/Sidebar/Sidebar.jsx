@@ -7,8 +7,10 @@ class Sidebar extends Component {
    return (
      <div className="side-bar">
        <ul className="item">
-         <li className="list-item">My boards</li>
+         <li className="list-item hj" style={{ border: '1px solid black', paddingTop: '0.8em'  }}><i class="fas fa-plus"></i>&nbsp; ADD LESSON</li>
          <li className="list-item">Math</li>
+         <li className="list-item">Physics</li>
+         <li className="list-item">Chemistry</li>
        </ul>
      </div>
    );

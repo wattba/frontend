@@ -59,8 +59,10 @@ img {
   background-color: #dcdcdc;
   color: black;
   text-transform: uppercase;
-  height: 15px;
-  width: 35px;
+  height: 18px;
+  width: 45px;
+  border-radius: 5px;
+  line-height: 18px;
   text-align: center;
   float: right;
   font-size: 10px;
