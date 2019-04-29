@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import LessonList from "./Components/Lesson/LessonList";
+import Profile from "./Components/Profile/Profile";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
       <div>
         <Router>
           <Switch>
+            <Route path="/Profile" component={Profile}></Route>
             <Route path="/Dashboard" component={Dashboard} />
             <Route path="/lessonList" component={LessonList} />
           </Switch>
