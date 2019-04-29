@@ -18,7 +18,7 @@
 .profile-container {
   display: flex;
   flex-direction: row;
-  font-size: 2em;
+  font-size: 14px;
   font-family: 'Raleway';
 }
 
@@ -31,7 +31,7 @@
 }
 
 .profile-header {
-  height: 200px;
+  height: 100px;
 }
 
 .profile-main {
@@ -49,8 +49,9 @@
 
 .avatar-container {
   background-image: url('https://avatars3.githubusercontent.com/u/31831596?s=460&v=4');
-  width: 450px;
-  height: 450px;
+  background-size: 200px 200px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 
@@ -67,8 +68,8 @@
 
 .profile-item-info {
   font-weight: 00;
-  width: 500px;
-  height: 100px;
+  width: 200px;
+  height: 30px;
 }
 
 .profile-item-detail {
@@ -76,9 +77,9 @@
 }
 
 .education {
-  width: 1000px;
+  width: 700px;
 }
 
 .teaching-philosophy {
-  width: 1000px;
+  width: 600px;
 }

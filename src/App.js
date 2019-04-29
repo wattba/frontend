@@ -19,7 +19,6 @@ class App extends Component {
         <Router>
           <Switch>
             <Route path="/Profile" component={Profile}></Route>
-            <Route path="/" component={Login} />
             <Route path="/login" component={Login} />
             <Route path="/Dashboard" component={Dashboard} />
             <Route path="/lessonList" component={LessonList} />
