@@ -12,11 +12,11 @@ class Dashboard extends Component {
         <div className="header">
           <Navbar />
         </div>
-        <div className="row" style={{ padding: '20px' }}>
-          <div className="col-md-3" style={{ borderRight: '1px solid black' }}>
+        <div className="row" style={{ zIndex: '-100', backgroundColor: '#000' }}>
+          <div className="col-md-3" style={{ borderRight: '1px solid black', backgroundColor: '#efeefe' }}>
             <Sidebar />
           </div>
-          <div className="col-md-9">
+          <div className="col-md-9 main-dash">
             <Lessons />
           </div>
         </div>

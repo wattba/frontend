@@ -20,9 +20,10 @@ class App extends Component {
       <div className="main-content">
         <Router>
           <Switch>
-            <Route path="/Profile" component={Profile} />
+            <Route path="/" exact="true" component={Login} />
+            <Route path="/profile" component={Profile} />
             <Route path="/login" component={Login} />
-            <Route path="/Dashboard" component={Dashboard} />
+            <Route path="/dashboard" component={Dashboard} />
             <Route path="/lessonList" component={LessonList} />
             <Route path="/build-your-class" component={BuildYourClass}/>
             <Route path="/lesson/:name" component={Lesson}/>
