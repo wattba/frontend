@@ -4,7 +4,6 @@
   /* background-color: rgb(100, 100, 100, 0.5); */
 }
 
-
 .item {
   width: 100%;
 }
@@ -19,6 +18,21 @@
   font-size: 22px;
   margin-top: 1.5em;
   padding-left: 2em;
+}
+
+.bookmarked {
+  padding-top: "10px";
+  padding-right: "10px";
+  padding-left: "10px";
+  font-size: "20px";
+}
+
+.line {
+  display: block;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+  color: lightgray;
 }
 
 .hj {

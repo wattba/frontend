@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import LessonCard from "./LessonCard";
-import './Lessons.css';
+import "./Lessons.css";
 import { Container, Row, Col } from "react-bootstrap";
 
 class LessonList extends Component {
@@ -19,11 +19,15 @@ class LessonList extends Component {
           <div className="col-md-10">
             <form>
               <div className="form-group main-group">
-                <input type="text" className="form-control top-search" placeholder="Search" />
+                <input
+                  type="text"
+                  className="form-control top-search"
+                  placeholder="Search"
+                />
               </div>
             </form>
           </div>
-          <div className="col-md-2"></div>
+          <div className="col-md-2" />
         </div>
         <div className="row">
           <div className="col-md-6">

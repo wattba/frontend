@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Login from "./Components/Login/Login";
 import Dashboard from "./Components/Dashboard/Dashboard";
+import Lesson from "./Components/Lesson/Lesson.jsx";
 import LessonList from "./Components/Lesson/LessonList";
 import Profile from "./Components/Profile/Profile";
 import BuildYourClass from "./Components/BuildClass/BuildYourClass";
