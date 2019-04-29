@@ -20,6 +20,10 @@
   padding-left: 2em;
 }
 
+.bold {
+  font-weight: bold !important;
+}
+
 .bookmarked {
   padding-top: "10px";
   padding-right: "10px";
