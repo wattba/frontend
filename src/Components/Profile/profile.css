@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: row;
   font-size: 14px;
-  font-family: 'Raleway';
+  font-family: "Raleway";
 }
 
 .profile-sidebar {
@@ -37,6 +37,7 @@
 .profile-main {
   width: 80%;
   height: 200vh;
+  background: #333;
   display: flex;
   flex-direction: column;
 }
@@ -48,7 +49,7 @@
 }
 
 .avatar-container {
-  background-image: url('https://avatars3.githubusercontent.com/u/31831596?s=460&v=4');
+  background-image: url("https://avatars3.githubusercontent.com/u/31831596?s=460&v=4");
   background-size: 200px 200px;
   width: 200px;
   height: 200px;

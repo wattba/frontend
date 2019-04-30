@@ -1,56 +1,125 @@
+.form-body {
+  color: #3e3c56;
+}
+
+.main-header {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 30px;
+  height: 50px;
+  color: #3e3c56;
+}
+
+.share-your-curriculum {
+  margin: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
 .main-container {
   display: flex;
   flex-direction: row;
 }
 
 .lesson-title {
-  width: 500px;
+  width: 610px;
+  border: lightgray 1px solid;
+  border-radius: 3px;
+  outline: none;
 }
 
 .lesson-title-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .lesson-description {
-  width: 500px;
-  height: 200px;
+  width: 610px;
+  height: 180px;
+  border: lightgray 1px solid;
+  border-radius: 3px;
+  outline: none;
 }
 
 .subject-des-btn {
   width: 200px;
   height: 30px;
-  border-radius: 10px;
+  border-radius: 30px;
   margin: 5px;
   outline: none;
 }
 
 .lesson-description-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .upload-section {
-  margin-left: 100px;
+  margin-left: 10px;
+}
+
+.subheader {
+  padding-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
 }
 
 .addfile {
-  width: 200px;
-  height: 100px;
-  margin: 20px;
+  width: 300px;
+  height: 300px;
+  margin: 16px;
   outline: none;
+  color: white;
+  font-size: 20px;
+  background: linear-gradient(to right, #7104ee, #5500ff);
+}
+
+.addfile:hover {
+  background: linear-gradient(to right, #607acb, #39d2c0);
+}
+
+.upload {
+  margin-left: 16px;
 }
 
 .subject-btn {
-  width: 200px;
+  padding-left: 5px;
+}
+
+.subject-btn {
+  width: 300px;
   height: 50px;
-  border-radius: 10px;
+  border-radius: 30px;
   margin: 5px;
-  outline: 0;
+  border: none;
+  /* color: white; */
+  color: black;
+  border: 1px solid gray;
+  outline: none;
+  font-weight: 500;
+  font-size: 14px;
+  /* background: linear-gradient(to right, #7104ee, #5500ff); */
+}
+
+.subject-btn:hover {
+  outline: none;
+  /* background: linear-gradient(to right,#607acb, #39d2c0); */
+}
+
+.subject-btn:focus {
+  outline: none;
+}
+
+.region {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
 }
 
 .main-body {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .main-subjects {
@@ -65,16 +134,37 @@
 }
 
 .submit-btn {
-  width: 30px;
+  width: 300px;
+  height: 50px;
+  border-radius: 30px;
+  margin: 5px;
+  border: none;
+  color: white;
+  outline: none;
+  font-weight: 500;
+  font-size: 14px;
+  background: linear-gradient(to right, #7104ee, #5500ff);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #fd1d1d, #fcb045);
+}
+.submit-btn:focus {
+  outline: none;
+}
+
+.select-country {
+  border: lightgray 1px solid;
+  border-radius: 3px;
+  width: 500px;
+  margin-left: 5px;
   height: 30px;
-  margin-left: 10px;
-  padding-bottom: 10px;
-  border-radius: 5px;
+  outline: none;
 }
 
 .submit-your-topic {
   border: lightgray 1px solid;
-  border-radius: 5px;
+  border-radius: 3px;
   width: 500px;
   margin-left: 5px;
   height: 30px;
@@ -92,7 +182,7 @@
 }
 
 .audience {
-  margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
 }

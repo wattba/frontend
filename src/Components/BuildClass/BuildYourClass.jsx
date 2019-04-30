@@ -1,18 +1,17 @@
-import React, {Component} from "react";
-import Navbar from './Navbar';
-import Sidebar from './Sidebar';
-import Main from './Main';
-import './buildyourclass.css';
+import React, { Component } from "react";
+import Navbar from "../Navbar/Navbar";
+import Sidebar from "./Sidebar";
+import Main from "./Main";
+import "./buildyourclass.css";
 
 class BuildYourClass extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      'class': '',
-      'hasUploadedPDF': false
+      class: "",
+      hasUploadedPDF: false
     };
   }
-
 
   render() {
     return (
@@ -21,7 +20,13 @@ class BuildYourClass extends Component {
           <Navbar />
         </div>
         <div className="row">
-          <div className="col-md-3" style={{ borderRight: '1px solid black' }}>
+          <div
+            className="col-md-3"
+            style={{
+              backgroundColor: "rgb(239, 238, 254)",
+              borderRight: "2px solid #3e3c56"
+            }}
+          >
             <Sidebar />
           </div>
           <div className="col-md-9">
@@ -32,5 +37,5 @@ class BuildYourClass extends Component {
     );
   }
 }
- 
+
 export default BuildYourClass;
