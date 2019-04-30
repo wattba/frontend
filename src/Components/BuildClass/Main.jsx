@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import "./Main.css";
 import axios from "axios";
+import $ from 'jquery';
 
 class Main extends PureComponent {
   constructor(props) {
@@ -51,6 +52,7 @@ class Main extends PureComponent {
 
   updateSubject = e => {
     e.preventDefault();
+    $("#"+e.target.value).css({ background: 'linear-gradient(to right, #607acb, #39d2c0)' });
     this.setState({ subject: e.target.value });
   };
 
@@ -62,6 +64,10 @@ class Main extends PureComponent {
     this.setState({ author: e.target.value });
   };
 
+  tags = e => {
+    this.setState({ tags: e.target.value });
+  }
+
   render() {
     console.log(this.state);
     return (
@@ -71,12 +77,17 @@ class Main extends PureComponent {
           <div className="audience">
             {/* <div className="subheader">Your curriculum</div> */}
             <p className="share-your-curriculum">
-              {/* <i class="fas fa-heart" style={{color: '#db094b'}}></i> */}
-              &nbsp;&nbsp;Share your lessons with other teachers
+              <i class="fas fa-check" style={{color: '#3ad4bb'}}></i>
+              &nbsp;&nbsp;Share your curriculum with other teachers
             </p>
             <p className="share-your-curriculum">
-              {/* <i class="fas fa-heart" style={{color: '#db094b'}}></i> */}
-              &nbsp;&nbsp;Build your own professional portfolio
+              <i class="fas fa-check" style={{color: '#3ad4bb'}}></i>
+              &nbsp;&nbsp;Connect with teachers in your community and around the world
+            </p>
+
+            <p className="share-your-curriculum">
+              <i class="fas fa-check" style={{color: '#3ad4bb'}}></i>
+              &nbsp;&nbsp;Participate in the world's largest repository of curriculum
             </p>
           </div>
         </div>
@@ -114,6 +125,7 @@ class Main extends PureComponent {
               className="subject-btn"
               value="Math"
               onClick={e => this.updateSubject(e)}
+              id="Math"
             >
               Math
             </button>
@@ -121,6 +133,7 @@ class Main extends PureComponent {
               className="subject-btn"
               value="Sciences"
               onClick={e => this.updateSubject(e)}
+              id="Sciences"
             >
               Sciences
             </button>
@@ -128,6 +141,7 @@ class Main extends PureComponent {
               className="subject-btn"
               value="Technology"
               onClick={e => this.updateSubject(e)}
+              id="Technology"
             >
               Technology
             </button>
@@ -137,6 +151,7 @@ class Main extends PureComponent {
               className="subject-btn"
               value="Humanities"
               onClick={e => this.updateSubject(e)}
+              id="Humanities"
             >
               Humanities
             </button>
@@ -144,6 +159,7 @@ class Main extends PureComponent {
                 className="subject-btn"
                 value="Art"
                 onClick={e => this.updateSubject(e)}
+                id="Art"
               >
                 Art
             </button>
@@ -151,6 +167,7 @@ class Main extends PureComponent {
               className="subject-btn"
               value="Engineering"
               onClick={e => this.updateSubject(e)}
+              id="Engineering"
             >
               Engineering
             </button>
@@ -160,6 +177,7 @@ class Main extends PureComponent {
               className="subject-btn"
               value="Languages"
               onClick={e => this.updateSubject(e)}
+              id="Languages"
             >
               Languages
             </button>
@@ -167,6 +185,7 @@ class Main extends PureComponent {
               className="subject-btn"
               value="Health"
               onClick={e => this.updateSubject(e)}
+              id="Health"
             >
               Health
             </button>
@@ -174,6 +193,7 @@ class Main extends PureComponent {
               className="subject-btn"
               value="Accounting"
               onClick={e => this.updateSubject(e)}
+              id="Accounting"
             >
               Accounting
             </button>
@@ -184,7 +204,15 @@ class Main extends PureComponent {
               <input
                 className="submit-your-topic"
                 onChange={e => this.grade(e)}
-                placeholder=""
+              />
+            </div>
+          </div>
+          <div className="audience">
+            <div className="subheader">Tags</div>
+            <div className="submit-subject">
+              <input
+                className="submit-your-topic"
+                onChange={e => this.tags(e)}
               />
             </div>
           </div>

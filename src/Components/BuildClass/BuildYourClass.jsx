@@ -29,7 +29,7 @@ class BuildYourClass extends Component {
           >
             <Sidebar />
           </div>
-          <div className="col-md-9">
+          <div className="build-your-class-main-container">
             <Main />
           </div>
         </div>

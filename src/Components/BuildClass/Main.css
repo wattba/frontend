@@ -3,7 +3,9 @@
 }
 
 .main-header {
+  margin-top: 15px;
   margin-bottom: 10px;
+  text-align: left;
   font-weight: 600;
   font-size: 30px;
   height: 50px;
@@ -23,9 +25,11 @@
 
 .lesson-title {
   width: 610px;
-  border: lightgray 1px solid;
+  border: none;
   border-radius: 3px;
   outline: none;
+  height: 40px;
+  background-color: #f1f0f0;
 }
 
 .lesson-title-container {
@@ -36,9 +40,10 @@
 .lesson-description {
   width: 610px;
   height: 180px;
-  border: lightgray 1px solid;
+  border: none;
   border-radius: 3px;
   outline: none;
+  background-color: #f1f0f0;
 }
 
 .subject-des-btn {
@@ -85,27 +90,23 @@
 }
 
 .subject-btn {
-  padding-left: 5px;
-}
-
-.subject-btn {
   width: 300px;
   height: 50px;
   border-radius: 30px;
   margin: 5px;
   border: none;
-  /* color: white; */
-  color: black;
-  border: 1px solid gray;
+  color: white;
+  /* color: black; */
+  border: none;
   outline: none;
   font-weight: 500;
   font-size: 14px;
-  /* background: linear-gradient(to right, #7104ee, #5500ff); */
+  background: linear-gradient(to right, #7104ee, #5500ff);
 }
 
 .subject-btn:hover {
   outline: none;
-  /* background: linear-gradient(to right,#607acb, #39d2c0); */
+  background: linear-gradient(to right,#607acb, #39d2c0);
 }
 
 .subject-btn:focus {
@@ -163,12 +164,13 @@
 }
 
 .submit-your-topic {
-  border: lightgray 1px solid;
+  border: none;
   border-radius: 3px;
   width: 500px;
   margin-left: 5px;
   height: 30px;
   outline: none;
+  background-color: #f1f0f0;
 }
 
 .qty {
