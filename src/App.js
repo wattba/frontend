@@ -13,6 +13,7 @@ import Lesson from "./Components/Lesson/Lesson.jsx";
 import LessonList from "./Components/Lesson/LessonList";
 import Profile from "./Components/Profile/Profile";
 import BuildYourClass from "./Components/BuildClass/BuildYourClass";
+import Bookmarks from "./Components/Lesson/Bookmarks.jsx"
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
             <Route path="/lessonList" component={LessonList} />
             <Route path="/build-your-class" component={BuildYourClass}/>
             <Route path="/lesson/:name" component={Lesson}/>
+            <Route path="/bookmarks" component={Bookmarks}/>
           </Switch>
         </Router>
       </div>

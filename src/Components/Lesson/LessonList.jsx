@@ -178,6 +178,9 @@ class LessonList extends Component {
                 <span class="sr-only">Toggle Dropdown</span>
               </button>
               <ul class="dropdown-menu">
+              <li>
+                <a href="/bookmarks">My Bookmarks</a>
+              </li>
                 <li>
                   <a href="/login">Logout</a>
                 </li>
