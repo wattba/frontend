@@ -48,6 +48,7 @@ class Lesson extends Component {
       reviews: [],
       details: {}
     };
+    this.selectLang = this.selectLang.bind(this);
   }
 
   componentDidMount() {
@@ -76,6 +77,30 @@ class Lesson extends Component {
       .then(data => {
         this.setState({ details: data[0] });
       });
+  }
+
+  selectLang(e) {
+    let dst_lang = e.target.value;
+    let data = {
+      text: "This is awesome",
+      src_lang: "en",
+      dst_lang: dst_lang.toString()
+    };
+    // fetch("http://18.236.191.192:3000/translate", {
+    //   method: 'POST',
+    //   mode: 'no-cors',
+    //   headers: {
+    //     "Access-Control-Allow-Origin": "*",
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(data)
+    // }).then(function(response) {
+    //   console.log(response.json());
+    //   return response.json();
+    // }).then(function(data) {
+    //     console.log(data);
+    // });
   }
 
   render() {
@@ -119,15 +144,12 @@ class Lesson extends Component {
                   style={{ paddingTop: "20px" }}
                 />
               </div>
-              <div className="col-xs-8">
+              <div className="col-xs-5">
                 <div className="subtitles">
                   Age Range:&nbsp;&nbsp; {this.state.details.age_range}
                 </div>
                 <div className="subtitles">
                   Language:&nbsp;&nbsp; {this.state.details.language}
-                </div>
-                <div className="subtitles">
-                  Translation:&nbsp;&nbsp; {this.state.details.translation}
                 </div>
                 <div className="subtitles">
                   Subject Matter:&nbsp;&nbsp;{" "}
@@ -139,6 +161,14 @@ class Lesson extends Component {
                 <div className="subtitles">
                   Duration:&nbsp;&nbsp; {this.state.details.duration}
                 </div>
+              </div>
+              <div className="col-xs-3">
+                <h4>TRANSLATE :</h4>
+                <select value={"English"} onChange={this.selectLang}>
+                  <option value="en">English</option>
+                  <option value="de">German</option>
+                  <option value="fr">French</option>
+                </select>
               </div>
             </div>
             <div className="row">
