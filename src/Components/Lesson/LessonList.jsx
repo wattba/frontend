@@ -8,6 +8,7 @@ class LessonList extends Component {
     super(props);
     this.state = { resultsRecommends: [], resultsTrending: [], lessons: [], filtered: [] };
     this.search = this.search.bind(this);
+    this.handleBook = this.handleBook.bind(this);
   }
 
   componentDidMount() {
@@ -41,7 +42,39 @@ class LessonList extends Component {
       }
       if(val === "") filtered = []
       this.setState({ filtered, });
-      console.log(filtered);
+
+  }
+
+  handleChange() {
+    let filtered_tmp = [];
+    for(let i=0;i<this.state.filtered.length;i++) {
+      for(let j=0;j<this.state.lessons.length;j++) {
+        if(this.state.lessons[j].id === this.state.filtered[i].id)
+          filtered_tmp.push(this.state.lessons[j]);
+      }
+    }
+    this.setState({ filtered: filtered_tmp });
+  }
+
+  handleBook()
+  {
+    fetch(
+      "http://wattba.h9ssxfia9b.us-west-2.elasticbeanstalk.com/api/quick/lessons/recommended"
+    )
+      .then(response => response.json())
+      .then(data => this.setState({ resultsRecommends: data }));
+
+      fetch(
+        "http://wattba.h9ssxfia9b.us-west-2.elasticbeanstalk.com/api/quick/lessons/trending"
+      )
+        .then(response => response.json())
+        .then(data => this.setState({ resultsTrending: data }));
+
+        fetch("http://wattba.h9ssxfia9b.us-west-2.elasticbeanstalk.com/api/v1/lessons/")
+          .then(data => data.json())
+          .then(data => this.setState({ lessons: data.results }))
+          .then(() => this.handleChange());
+
 
   }
 
@@ -63,6 +96,8 @@ class LessonList extends Component {
                   desc={data.description.slice(0, 200) + "..."}
                   tags={data.tags}
                   id={data.id}
+                  bookmarked={data.bookmarked}
+                  callBack={this.handleBook}
                 />
               </div>
             ))}
@@ -81,6 +116,9 @@ class LessonList extends Component {
                 name={data.title}
                 desc={data.description.slice(0, 200) + "..."}
                 tags={data.tags}
+                  id={data.id}
+                bookmarked={data.bookmarked}
+                callBack={this.handleBook}
               />
             </div>
           ))}
@@ -96,6 +134,9 @@ class LessonList extends Component {
        name={data.title}
        desc={data.summary.slice(0, 200) + "..."}
        tags={data.tags}
+         id={data.id}
+       bookmarked={data.bookmarked}
+       callBack={this.handleBook}
      />
      </div>
    )

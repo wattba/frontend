@@ -10,13 +10,17 @@ class LessonCard extends React.Component {
   }
 
   like() {
+    var that = this;
+    fetch("http://wattba.h9ssxfia9b.us-west-2.elasticbeanstalk.com/api/quick/lessons/" + this.props.id + "/bookmark")
+    .then(() => this.props.callBack())
     this.setState({ liked: !this.state.liked });
   }
 
   render() {
     const tags = this.props.tags.split(",");
     let heart;
-    if (this.state.liked)
+    const test = this.props.bookmarked;
+    if (test)
       heart = (
         <i
           className="fas fa-bookmark like"
