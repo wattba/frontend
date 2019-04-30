@@ -20,7 +20,7 @@ class LessonCard extends React.Component {
     const tags = this.props.tags.split(",");
     let heart;
     const test = this.props.bookmarked;
-    if (test)
+    if (test === true)
       heart = (
         <i
           className="fas fa-bookmark like"
@@ -28,10 +28,16 @@ class LessonCard extends React.Component {
           style={{ color: "red" }}
         />
       );
-    else
+    else if(test === false) {
       heart = (
         <i className="fas fa-bookmark like" onClick={this.like.bind(this)} />
       );
+    }
+    else {
+      heart = (
+        <i className="fas fa-trash-alt like" onClick={this.like.bind(this)} />
+      )
+    }
     return (
       <div
         className="col-md-12 lessons-card"

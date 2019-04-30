@@ -8,6 +8,7 @@ class Bookmarks extends Component {
   constructor(props) {
     super(props);
     this.state = { lessons: [] };
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -18,9 +19,15 @@ class Bookmarks extends Component {
       .then(data => this.setState({ lessons: data }));
   }
 
+  handleChange() {
+    fetch("http://wattba.h9ssxfia9b.us-west-2.elasticbeanstalk.com/api/quick/users/bookmarked")
+      .then(data => data.json())
+      .then(data => this.setState({ lessons: data }));
+  }
+
 
   render() {
-    const dataRecommends = this.state.lessons;
+    const lessons = this.state.lessons;
 
     const original = <div className="original">
       <div
@@ -29,7 +36,7 @@ class Bookmarks extends Component {
       >
         <h4 className="trending">My Bookmarks</h4>
         <div className="row">
-            {dataRecommends.map(data => (
+            {lessons.map(data => (
               <div className="col-md-4">
                 <LessonCard
                   name={data.title}
@@ -37,7 +44,7 @@ class Bookmarks extends Component {
                   tags={data.tags}
                   id={data.id}
                   bookmarked={null}
-                  callBack={null}
+                  callBack={this.handleChange}
                 />
               </div>
             ))}
