@@ -12,12 +12,16 @@ class LessonCard extends React.Component {
   like(e) {
     e.preventDefault();
     var that = this;
-    fetch("http://wattba.h9ssxfia9b.us-west-2.elasticbeanstalk.com/api/quick/lessons/" + this.props.id + "/bookmark")
-    .then(() => this.props.callBack())
+    fetch(
+      "http://wattba.h9ssxfia9b.us-west-2.elasticbeanstalk.com/api/quick/lessons/" +
+        this.props.id +
+        "/bookmark"
+    ).then(() => this.props.callBack());
     this.setState({ liked: !this.state.liked });
   }
 
   render() {
+    console.log(this.props.id);
     const tags = this.props.tags.split(",");
     let heart;
     const test = this.props.bookmarked;
@@ -29,47 +33,49 @@ class LessonCard extends React.Component {
           style={{ color: "black" }}
         />
       );
-    else if(test === false) {
+    else if (test === false) {
       heart = (
         <i className="far fa-bookmark like" onClick={this.like.bind(this)} />
       );
-    }
-    else {
+    } else {
       heart = (
         <i className="fas fa-trash-alt like" onClick={this.like.bind(this)} />
-      )
+      );
     }
     return (
-      <a href={"/lesson/" + this.props.id} style={{ textDecoration: 'none', color: 'black' }}>
-      <div
-        className="col-md-12 lessons-card"
-        style={{ marginBottom: "20px", marginTop: "10px" }}
+      <a
+        href={"/lesson/" + this.props.id}
+        style={{ textDecoration: "none", color: "black" }}
       >
-        <Card style={{ width: "auto", height: "230px", borderRadius: "15px" }}>
-          <Card.Body>
+        <div
+          className="col-md-12 lessons-card"
+          style={{ marginBottom: "20px", marginTop: "10px" }}
+        >
+          <Card
+            style={{ width: "auto", height: "230px", borderRadius: "15px" }}
+          >
+            <Card.Body>
+              <div className="row">
+                <div className="col-md-4">
+                  <Card.Title className="card-title">
+                    {this.props.name}
+                  </Card.Title>
+                </div>
+                <div className="col-md-8">
+                  {tags.map(tags => (
+                    <div className="tag">{tags}</div>
+                  ))}
+                </div>
+              </div>
+              <Card.Text>{this.props.desc}</Card.Text>
+            </Card.Body>
             <div className="row">
-              <div className="col-md-4">
-                <Card.Title className="card-title">
-                  {this.props.name}
-                </Card.Title>
-              </div>
-              <div className="col-md-8">
-                {tags.map(tags => (
-                  <div className="tag">{tags}</div>
-                ))}
-              </div>
+              <div className="col-md-6">{heart}</div>
+              <div className="col-md-6" />
             </div>
-            <Card.Text>{this.props.desc}</Card.Text>
-          </Card.Body>
-          <div className="row">
-            <div className="col-md-6">{heart}</div>
-            <div className="col-md-6">
-
-            </div>
-          </div>
-        </Card>
-      </div>
-     </a>
+          </Card>
+        </div>
+      </a>
     );
   }
 }

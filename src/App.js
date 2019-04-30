@@ -27,7 +27,7 @@ class App extends Component {
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/lessonList" component={LessonList} />
             <Route path="/build-your-class" component={BuildYourClass} />
-            <Route path="/lesson/:name" component={Lesson} />
+            <Route path="/lesson/:id" component={Lesson} />
             <Route path="/bookmarks" component={Bookmarks} />
           </Switch>
         </Router>

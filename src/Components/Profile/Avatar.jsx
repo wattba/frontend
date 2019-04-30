@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
-import './profile.css';
+import React, { Component } from "react";
+import "./profile.css";
 
 class Avatar extends Component {
   render() {
-    return (
-      <div className="avatar-container">
-      </div>
-    );
+    return <div className="avatar-container" />;
   }
- }
- 
- export default Avatar;
+}
+
+export default Avatar;

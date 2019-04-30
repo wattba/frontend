@@ -80,36 +80,29 @@ class Lesson extends Component {
   }
 
   selectLang(e) {
-    let dst_lang = e.target.value;
-    let data = {
-      text: "This is awesome",
-      src_lang: "en",
-      dst_lang: dst_lang.toString()
-    };
-    // fetch("http://18.236.191.192:3000/translate", {
-    //   method: 'POST',
-    //   mode: 'no-cors',
-    //   headers: {
-    //     "Access-Control-Allow-Origin": "*",
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(data)
-    // }).then(function(response) {
-    //   console.log(response.json());
-    //   return response.json();
-    // }).then(function(data) {
-    //     console.log(data);
-    // });
+    var dst_lang = e.target.value;
+    console.log(this.props.id);
+    fetch(
+      "http://wattba.h9ssxfia9b.us-west-2.elasticbeanstalk.com/api/quick/pytorch/" +
+        this.props.match.params.id +
+        "/" +
+        dst_lang +
+        "/translate/detail"
+    )
+      .then(data => data.json())
+      .then(data => {
+        this.setState({ details: data[0] });
+      });
   }
 
   render() {
+    console.log(this.props.match.params.id);
     return (
       <div className="container-fluid">
         <div className="header">
           <Navbar />
         </div>
-        <div className="row">
+        <div className="row test">
           <div className="col-md-3">
             <Sidebar />
           </div>
@@ -122,7 +115,7 @@ class Lesson extends Component {
                       <div className="titleLessons bookmarked">
                         {" "}
                         <i className="fas fa-bookmark" />
-                        &nbsp; {this.state.details.topic}
+                        &nbsp; {this.state.details.title}
                       </div>
                     </div>
                   </div>
@@ -131,14 +124,14 @@ class Lesson extends Component {
               </div>
               <div className="col-xs-3">
                 Rating {RenderStarts(this.state.details.rating)} (
-                {this.state.details.rating * 3.5})
+                {this.state.details.votes})
               </div>
             </div>
             <div className="line" />
             <div className="row">
               <div className="col-xs-4">
                 <img
-                  src=""
+                  src={this.state.details.image}
                   width="300px"
                   height="300px"
                   style={{ paddingTop: "20px" }}
@@ -164,10 +157,14 @@ class Lesson extends Component {
               </div>
               <div className="col-xs-3">
                 <h4>TRANSLATE :</h4>
-                <select value={"English"} onChange={this.selectLang}>
+                <select onChange={this.selectLang}>
                   <option value="en">English</option>
                   <option value="de">German</option>
                   <option value="fr">French</option>
+                  <option value="id">Indonesia</option>
+                  <option value="it">Italian</option>
+                  <option value="es">Spanish</option>
+                  <option value="pl">Polish</option>
                 </select>
               </div>
             </div>

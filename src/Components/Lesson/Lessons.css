@@ -1,6 +1,6 @@
 .top-search {
   border: 0px solid;
-  background-color: rgb(255, 255, 255, 0.9);
+  background-color: rgb(239, 238, 254);
   outline: none;
   height: 49px;
   padding-left: 15px;
@@ -11,6 +11,10 @@
   border: 1px solid #42383c;
   margin-top: 1.85em;
   margin-left: -6em;
+}
+
+.test {
+  background-color: rgb(239, 238, 254);
 }
 
 img {

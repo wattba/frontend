@@ -4,7 +4,7 @@
   width: 50px;
 }
 
-.navbar-brand {
+.m-brand {
   color: black;
   font-size: 32px;
   line-height: 3px;
@@ -42,5 +42,5 @@
 }
 
 .navbar-right {
-  margin-top: 0.7em;
+  margin-top: 10px;
 }

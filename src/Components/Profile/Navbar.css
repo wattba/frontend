@@ -4,12 +4,13 @@ nav {
 }
 
 .navbar {
-  background: white;
+  background: linear-gradient(-45deg, #3e3c56, #6c63ff);
 }
 
 .navbar-brand {
-  color: black;
+  color: white !important;
   font-size: 32px;
+  align-content: left;
   padding: 1.2em;
   line-height: 2px;
   font-weight: 100;
@@ -38,7 +39,7 @@ nav {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 .dropdown {

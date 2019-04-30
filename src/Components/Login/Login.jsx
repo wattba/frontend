@@ -2,19 +2,15 @@ import React, { Component } from "react";
 import AuthNavbar from "./AuthNavbar";
 import LoginForm from "./LoginForm";
 import "../../App.css";
-
+import Navbar from "../Navbar/Navbar";
 class Login extends Component {
   render() {
     return (
       <div>
+        <div className="header">
+          <Navbar />
+        </div>
         <div className="App container-fluid backgroundLogin">
-          {" "}
-          <nav
-            class="navbar navbar-light bg-light 
-navbar-custom "
-          >
-            <h3 className="title">OPEN CURRICULUM</h3>
-          </nav>
           <div className="full-screen">
             <br />
             <div className="row">

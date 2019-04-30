@@ -19,9 +19,14 @@ class Navbar extends Component {
               <span className="icon-bar" />
               <span className="icon-bar" />
             </button>
-            <a className="navbar-brand main" href="#">
-              OpenCurriculum
-            </a>
+            <div className="row">
+              <div className="col-xs-2">
+                <a className="navbar-brand main" href="#">
+                  OpenCurriculum
+                </a>
+              </div>
+              <div className="col-xs-10" />
+            </div>
           </div>
         </div>
       </nav>
