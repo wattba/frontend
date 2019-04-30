@@ -22,7 +22,7 @@ class Main extends PureComponent {
     axios({
       method: "post",
       url:
-        "http://wattba.h9ssxfia9b.us-west-2.elasticbeanstalk.com/api/v1/lessons/",
+        "http://wattba.h9ssxfia9b.us-west-2.elasticbeanstalk.com/api/quick/lessons/save",
       data: {
         title: this.state.title,
         summary: this.state.summary,
@@ -119,20 +119,11 @@ class Main extends PureComponent {
             </button>
             <button
               className="subject-btn"
-              value="English"
-              onClick={e => this.updateSubject(e)}
-            >
-              English
-            </button>
-            <button
-              className="subject-btn"
               value="Sciences"
               onClick={e => this.updateSubject(e)}
             >
               Sciences
             </button>
-          </div>
-          <div className="main-subjects">
             <button
               className="subject-btn"
               value="Technology"
@@ -140,13 +131,8 @@ class Main extends PureComponent {
             >
               Technology
             </button>
-            <button
-              className="subject-btn"
-              value="Social Studies"
-              onClick={e => this.updateSubject(e)}
-            >
-              Social Studies
-            </button>
+          </div>
+          <div className="main-subjects">
             <button
               className="subject-btn"
               value="Humanities"
@@ -154,14 +140,12 @@ class Main extends PureComponent {
             >
               Humanities
             </button>
-          </div>
-          <div className="main-subjects">
             <button
-              className="subject-btn"
-              value="Art"
-              onClick={e => this.updateSubject(e)}
-            >
-              Art
+                className="subject-btn"
+                value="Art"
+                onClick={e => this.updateSubject(e)}
+              >
+                Art
             </button>
             <button
               className="subject-btn"
@@ -170,21 +154,14 @@ class Main extends PureComponent {
             >
               Engineering
             </button>
-            <button
-              className="subject-btn"
-              value="Reading"
-              onClick={e => this.updateSubject(e)}
-            >
-              Reading
-            </button>
           </div>
           <div className="main-subjects">
             <button
               className="subject-btn"
-              value="Foreign Languages"
+              value="Languages"
               onClick={e => this.updateSubject(e)}
             >
-              Foreign Languages
+              Languages
             </button>
             <button
               className="subject-btn"
@@ -195,10 +172,10 @@ class Main extends PureComponent {
             </button>
             <button
               className="subject-btn"
-              value="Physical Education"
+              value="Accounting"
               onClick={e => this.updateSubject(e)}
             >
-              Physical Education
+              Accounting
             </button>
           </div>
           <div className="audience">
