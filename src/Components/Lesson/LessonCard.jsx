@@ -9,7 +9,8 @@ class LessonCard extends React.Component {
     };
   }
 
-  like() {
+  like(e) {
+    e.preventDefault();
     var that = this;
     fetch("http://wattba.h9ssxfia9b.us-west-2.elasticbeanstalk.com/api/quick/lessons/" + this.props.id + "/bookmark")
     .then(() => this.props.callBack())
@@ -25,12 +26,12 @@ class LessonCard extends React.Component {
         <i
           className="fas fa-bookmark like"
           onClick={this.like.bind(this)}
-          style={{ color: "red" }}
+          style={{ color: "black" }}
         />
       );
     else if(test === false) {
       heart = (
-        <i className="fas fa-bookmark like" onClick={this.like.bind(this)} />
+        <i className="far fa-bookmark like" onClick={this.like.bind(this)} />
       );
     }
     else {
@@ -39,6 +40,7 @@ class LessonCard extends React.Component {
       )
     }
     return (
+      <a href={"/lesson/" + this.props.id} style={{ textDecoration: 'none', color: 'black' }}>
       <div
         className="col-md-12 lessons-card"
         style={{ marginBottom: "20px", marginTop: "10px" }}
@@ -62,13 +64,12 @@ class LessonCard extends React.Component {
           <div className="row">
             <div className="col-md-6">{heart}</div>
             <div className="col-md-6">
-              <a href={"/lesson/" + this.props.id}>
-                <i className="fas fa-arrow-circle-right arrow" />
-              </a>
+
             </div>
           </div>
         </Card>
       </div>
+     </a>
     );
   }
 }

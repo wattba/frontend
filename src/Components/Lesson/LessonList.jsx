@@ -30,15 +30,21 @@ class LessonList extends Component {
   }
 
   search(e) {
-
-      let val = e.target.value;
-      console.log(this.state.lessons);
+      let val = e.target.value.toLowerCase();
       const lessons = this.state.lessons;
       let filtered = [];
 
       for(var i = 0; i < lessons.length; i++) {
-        if(lessons[i].title.toLowerCase().match(val.toLowerCase()))
+        let lesson_title = lessons[i].title.toLowerCase(), lesson_tags = lessons[i].tags;
+        if(lesson_title.match(val))
           filtered.push(lessons[i]);
+        else {
+          for(var j=0;j<lesson_tags.length;j++) {
+            if(val.match(lesson_tags[j].toLowerCase()))
+              break;
+          }
+          filtered.push(lessons[i]);
+        }
       }
       if(val === "") filtered = []
       this.setState({ filtered, });
@@ -74,8 +80,6 @@ class LessonList extends Component {
           .then(data => data.json())
           .then(data => this.setState({ lessons: data.results }))
           .then(() => this.handleChange());
-
-
   }
 
   render() {
