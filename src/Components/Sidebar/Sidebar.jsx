@@ -16,7 +16,7 @@ class Sidebar extends Component {
 
   componentDidMount() {
     fetch(
-      "http://wattba.h9ssxfia9b.us-west-2.elasticbeanstalk.com/api/quick/users/0/recent"
+      "http://wattba.h9ssxfia9b.us-west-2.elasticbeanstalk.com/api/quick/users/1/recent"
     )
       .then(data => data.json())
       .then(response => this.setState({ recentLessons: response }));

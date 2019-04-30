@@ -17,7 +17,11 @@ class LoginForm extends Component {
                     className="form-control inp"
                     placeholder="Subject Matter"
                   />{" "}
-                  <button type="submit" className="btn btn-default login-btn">
+                  <button
+                    type="submit"
+                    href="/dashboard"
+                    className="btn btn-default login-btn"
+                  >
                     <a
                       href="/dashboard"
                       style={{ textDecoration: "none", color: "white" }}
