@@ -97,7 +97,7 @@ class LessonList extends Component {
               <div className="col-md-4">
                 <LessonCard
                   name={data.title}
-                  desc={data.description.slice(0, 200) + "..."}
+                  desc={data.description.slice(0, 100) + "..."}
                   tags={data.tags}
                   id={data.id}
                   bookmarked={data.bookmarked}
@@ -118,7 +118,7 @@ class LessonList extends Component {
             <div className="col-md-4">
               <LessonCard
                 name={data.title}
-                desc={data.description.slice(0, 200) + "..."}
+                desc={data.description.slice(0, 100) + "..."}
                 tags={data.tags}
                   id={data.id}
                 bookmarked={data.bookmarked}
@@ -136,7 +136,7 @@ class LessonList extends Component {
     <div className="col-md-4">
      <LessonCard
        name={data.title}
-       desc={data.summary.slice(0, 200) + "..."}
+       desc={data.summary.slice(0, 100) + "..."}
        tags={data.tags}
          id={data.id}
        bookmarked={data.bookmarked}
