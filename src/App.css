@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   padding: 0;
 }
 
@@ -9,39 +9,117 @@
   margin: 0;
 }
 
+.backgroundLogin {
+  width: auto;
+  padding-top: 170px;
+  height: auto;
+  background: linear-gradient(
+      -45deg,
+      #ee7752,
+      transparent,
+      transparent,
+      #ee7752
+    ),
+    url("https://images.unsplash.com/photo-1542810634-71277d95dcbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9")
+      no-repeat center;
+  background-size: 120% 120%;
+  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.8);
+  -webkit-animation: Gradient 35s ease infinite;
+  -moz-animation: Gradient 65s ease infinite;
+  animation: Gradient 65s ease infinite;
+}
+
+.backgroundImage {
+  background-image: url("https://images.unsplash.com/photo-1542810634-71277d95dcbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9");
+}
+
+.backgroundLoginForm {
+  width: auto;
+  height: auto;
+  background-image: url("https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1404&q=80");
+  opacity: 1;
+  color: #fff;
+  background: linear-gradient(-45deg, #3e3c56, #6c63ff);
+
+  background-size: 200% 800%;
+  -webkit-animation: Gradient 30s ease infinite;
+  -moz-animation: Gradient 30s ease infinite;
+  animation: Gradient 2s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-light {
+  background: linear-gradient(-45deg, #3e3c56, #6c63ff);
+  background-color: #6c63ff !important;
+}
+
+.navbar-custom {
+  background: linear-gradient(-45deg, #3e3c56, #6c63ff);
+  background-color: #6c63ff !important;
+  border-radius: 1px;
+  opacity: 0.7;
+}
+
 /* .main-content {
   border-top: 5px solid #4d468c;
 } */
 
-.title-box {
-  width: 350px;
-  height: 50px;
-  border: 3px solid #42383c;
-  float: left;
-  border-radius: 15px;
-  background-color: #efeefe;
-  margin-left: -130%;
-  margin-top: 4%;
-}
-
 .title {
-  font-size: 27px;
-  margin: 0.5em;
+  font-size: 35px;
+  text-align: center;
+  width: 40px;
   text-transform: uppercase;
-  color: #464176;
-  letter-spacing: 1.25px;
-  line-height: 20px;
+  color: black;
+  letter-spacing: 25px;
+  line-height: 30px;
   font-weight: 700;
 }
 
-
 .full-screen {
-  height: 805px;
+  height: 800px;
+  width: 100%;
+  overflow: hidden;
 }
 
-#login-screen, #signup-screen {
+#login-screen,
+#signup-screen {
   /* background-image: linear-gradient(to right, #ff9966, #ff5e62); */
-  background-image: url('./Components/Login/gg1.png');
+
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
@@ -85,7 +163,6 @@ nav {
   box-shadow: none;
 }
 
-
 .welcome {
   font-size: 96px;
   font-weight: 100;
@@ -95,15 +172,30 @@ nav {
   letter-spacing: 0.5px;
 }
 
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+}
+
 .login-form {
   background-color: white;
-  width: 60%;
+  width: 800px;
   padding-top: 0.5em;
-  height: 350px;
-  margin-left: 15%;
-  margin-top: 17%;
-  z-index: 100;
-  border: 3px solid #3e3c56;
+  height: 100px;
+  border: 1px solid #3e3c56;
   border-radius: 15px;
 }
 
@@ -118,15 +210,18 @@ nav {
 }
 
 .main-nav {
-  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
   z-index: 100;
 }
 
 .inp-group {
-  width: 82%;
+  width: 500px;
+  height: 25px;
+  border-radius: 15px;
+  border: 1px solid grey;
+  padding-left: 8px;
   margin: auto;
   margin-top: 3em;
-  border:  0;
 }
 
 .main-group {
@@ -136,12 +231,13 @@ nav {
 }
 
 .inp {
-  border: 0;
+  border: 2px;
   outline: none;
   border-bottom: 1px solid #888888;
-  height: 49px;
-  border-radius: 0;
-  font-size: 13px;
+  height: 50px;
+  width: 500px;
+  border-radius: 20px;
+  font-size: 16px;
   padding-top: 24px;
 }
 
@@ -158,10 +254,10 @@ nav {
 }
 
 .login-btn {
-  margin-top: 3em;
+  margin-top: 20px;
   border: 0;
-  border-radius: 0;
-  width: 78%;
+  border-radius: 20px;
+  width: 70%;
   height: 45px;
   color: white;
   background-image: linear-gradient(to right, #3e3c56, #6c63ff);
@@ -244,14 +340,14 @@ nav {
 }
 
 .name {
-    margin-top: 1.2em;
-    font-weight: 500;
-    font-size: 24px;
+  margin-top: 1.2em;
+  font-weight: 500;
+  font-size: 24px;
 }
 
 .fname {
-    font-weight: 500;
-    font-size: 20px;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .desg {

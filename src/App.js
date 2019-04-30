@@ -17,19 +17,17 @@ import BuildYourClass from "./Components/BuildClass/BuildYourClass";
 class App extends Component {
   render() {
     return (
-      <div className="main-content">
-        <Router>
-          <Switch>
-            <Route path="/" exact="true" component={Login} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/login" component={Login} />
-            <Route path="/dashboard" component={Dashboard} />
-            <Route path="/lessonList" component={LessonList} />
-            <Route path="/build-your-class" component={BuildYourClass}/>
-            <Route path="/lesson/:name" component={Lesson}/>
-          </Switch>
-        </Router>
-      </div>
+      <Router>
+        <Switch>
+          <Route path="/" exact="true" component={Login} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/login" component={Login} />
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/lessonList" component={LessonList} />
+          <Route path="/build-your-class" component={BuildYourClass} />
+          <Route path="/lesson/:name" component={Lesson} />
+        </Switch>
+      </Router>
     );
   }
 }
